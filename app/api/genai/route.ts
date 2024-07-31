@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-export const runtime = 'edge';
+//export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,6 +25,7 @@ export async function POST(req: NextRequest) {
     console.error('Error processing request:', error);
     return new NextResponse(JSON.stringify({ error: 'Internal server error' }), { status: 500 });
   }
+  
 }
 
 function buildGoogleGenAIPrompt(messages: { role: string; content: string }[]) {
