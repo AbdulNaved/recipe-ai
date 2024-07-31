@@ -1,23 +1,23 @@
 import React from 'react';
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image'; 
 
 function Header() {
   return (
-    <div className="flex flex-col items-center justify-center my-4">
-      <div className="flex items-center space-x-2 ">
+    <div className="flex flex-col items-center justify-center my-4 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="flex items-center space-x-2 flex-wrap justify-center">
         <Image 
-          className="h-full w-20" 
-          src="/assets/pizza.png" // Use path relative to public directory
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" // Responsive sizes
+          src="/assets/pizza.png" 
           alt="Recipe AI Icon" 
-          width={80} // Adjust width as needed
-          height={80} // Adjust height as needed
+          width={112} 
+          height={112} 
         />
-        <h1 className="text-yellow-700 text-5xl font-bold">Recipe AI Bot</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-700">
+          Recipe AI Bot
+        </h1>
       </div>
     </div>
   );
 }
 
 export default Header;
-
-

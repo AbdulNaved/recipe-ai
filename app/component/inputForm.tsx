@@ -8,8 +8,7 @@ const recipePrompts = [
   "Can you give me a recipe for a vegan burger?",
   "How to cook a perfect steak?",
   "What is the recipe for a classic margarita pizza?",
-  "How to make biryani?"
-  
+  "How to make biryani?",
 ];
 
 type Props = {
@@ -41,8 +40,38 @@ const InputForm = ({ handleInputChange, handleSubmit, input, isLoading, stop }: 
     const recipeKeywords = [
       "recipe", "cook", "make", "ingredients", "how to", "prepare", "dish", "meal", "bake", 
       "ingredient", "cooking", "recipe for", "method", "instructions", "dish for", "serve", 
-      "food", "cuisine", "recipe guide", "recipe details", "cooking instructions"
+      "food", "cuisine", "recipe guide", "recipe details", "cooking instructions",
+      "homemade", "step-by-step recipe", "easy recipe", "quick meal", "cooking tips", 
+      "recipe ideas", "meal prep", "dish ideas", "food guide", "cooking method", 
+      "how to make", "recipe book", "recipe suggestions", "recipe tips", "delicious recipe", 
+      "simple recipe", "healthy recipe", "traditional recipe", "recipe collection", "cooking time", 
+      "recipe card", "family recipe", "favorite recipe", "recipe inspiration", "meal ideas",
+      
+      // Specific recipe questions and prompts
+      "How do I make spaghetti carbonara?",
+      "What are the ingredients for a chocolate cake?",
+      "How do I prepare a Caesar salad?",
+      "Can you give me a recipe for a vegan burger?",
+      "How to cook a perfect steak?",
+      "What is the recipe for a classic margarita pizza?",
+      "How to make biryani?",
+      "Recipe for homemade lasagna",
+      "How to bake a fluffy cake",
+      "Ingredients for a classic omelette",
+      "How to make creamy mashed potatoes",
+      "Recipe for a refreshing smoothie",
+      "How to cook a juicy roast chicken",
+      "Ingredients for a rich beef stew",
+      "How to make the best guacamole",
+      "Recipe for a vegan chili",
+      "How to bake sourdough bread",
+      "Ingredients for a tangy barbecue sauce",
+      "How to prepare a savory quiche",
+      "Recipe for a classic beef Wellington",
+      "How to make a perfect panna cotta"
     ];
+    
+
     return recipeKeywords.some(keyword => question.toLowerCase().includes(keyword));
   };
 
@@ -94,12 +123,12 @@ const InputForm = ({ handleInputChange, handleSubmit, input, isLoading, stop }: 
           {isLoading ? (
             <Loader2 onClick={stop} className="h-10 w-10 text-red-500 animate-spin" />
           ) : (
-            <Send className="h-10 w-10 text-green-500" />
+            <Send className="h-8 w-8 text-green-500" />
           )}
         </button>
       </form>
     </div>
   );
 };
-//
+
 export default InputForm;

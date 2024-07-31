@@ -12,7 +12,7 @@ const Messages = ({ messages, isLoading }: Props) => {
   return (
     <div
       id="chatbox"
-      className="mt-3 flex flex-col-reverse w-full h-[calc(100vh-5rem)] overflow-y-auto p-4 text-left bg-[#111827] text-black"
+      className=" flex flex-col-reverse w-full h-[calc(100vh-5rem)] overflow-y-auto p-4 text-left bg-[#111827] text-black"
     >
       {messages.map((m) => (
         <div

@@ -8,7 +8,7 @@ import { CustomMessage } from "./component/type"; // Adjust the import path as n
 const recipeKeywords = [
   "recipe", "cook", "make", "ingredients", "how to", "prepare", "dish", "meal", "bake", 
   "ingredient", "cooking", "recipe for", "method", "instructions", "dish for", "serve", 
-  "food", "cuisine", "recipe guide", "recipe details", "cooking instructions" ,"biryani", "chicken", ""
+  "food", "cuisine", "recipe guide", "recipe details", "cooking instructions" ,"biryani", "chicken", "make", "how to make biryani?"
 ];
 
 export default function Home() {
